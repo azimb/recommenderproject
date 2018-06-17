@@ -1,0 +1,27 @@
+public class ProjectProfile {
+	
+	private String projectName;
+	public String getProjectName(){ return this.projectName; }
+	
+	private int projectUniquId;
+	public int getProjectUniqueId(){ return this.projectUniquId; }
+	
+	private UserProfile projectOwner;
+	public UserProfile projectOwner(){ return this.projectOwner }
+	
+	private UserProfile[] projectMembers;
+	public UserProfile[] projectMembers(){ this.projectMembers; }
+	
+	private String projectDescription;
+	public String projectDescription(){ this.projectDescription; }
+	
+	//private String[] interests; --> not sure
+	
+	public ProjectProfile( String projectName, int projectUniquId, UserProfile projectOwner, UserProfile[] projectMembers, String projectDescription ){
+		this.projectName = projectName;
+		this.projectUniquId = projectUniquId;
+		this.projectOwner = projectOwner;
+		this.projectMembers = projectMembers;
+		this.projectDescription = projectDescription;
+	}
+}
