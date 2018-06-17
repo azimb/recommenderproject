@@ -9,11 +9,15 @@ public class ProjectProfile {
 	private UserProfile projectOwner;
 	public UserProfile projectOwner(){ return this.projectOwner }
 	
-	private UserProfile[] projectMembers;
-	public UserProfile[] projectMembers(){ this.projectMembers; }
+	List<UserProfile> projectMembers = new ArrayList<MyClass>();
+	public List<UserProfile> projectMembers() {return this.projectMembers}
+	
+	
+	//private UserProfile[] projectMembers;
+	//public UserProfile[] projectMembers(){ return this.projectMembers; }
 	
 	private String projectDescription;
-	public String projectDescription(){ this.projectDescription; }
+	public String projectDescription(){ return this.projectDescription; }
 	
 	//private String[] interests; --> not sure
 	
@@ -24,4 +28,11 @@ public class ProjectProfile {
 		this.projectMembers = projectMembers;
 		this.projectDescription = projectDescription;
 	}
+	
+	public boolean addUserToProject(UserProfile user){
+		this.projectMembers.add(user);
+		return true;
+	}
+	
+	
 }
