@@ -25,6 +25,19 @@ public class Address {
 		this.province = province;
 		this.country = country;
 		this.zip = zip;
+	
+	
+	public String[] getAddress(){
+		String [] addressArray = new String[5];
+		addressArray[0] = this.getHouseOrApartment();
+		addressArray[1] = this.getStreet();
+		addressArray[2] = this.getStreet();
+		addressArray[3] = this.getProvince();
+		addressArray[4] = this.getProvince();
+		addressArray[5] = this.getZip();
+		
+		return addressArray;
+		
 	}
 
 }
